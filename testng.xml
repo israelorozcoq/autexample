@@ -3,8 +3,12 @@
 <suite name="Suite" configfailurepolicy="continue">
 
     <listeners>
-        <listener class-name="automation.Listener"/>
-        <listener class-name="resources.ExtentReporterNG"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="listener.CustomListeners"/>
+        <!--
+         <listener class-name="automation.base.CustomListeners"/>
+        -->
     </listeners>
 
     <test name ="utilities" >
